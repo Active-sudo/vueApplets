@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件监听</title>
+</head>
+<body>
+<div id="app">
+    <div>{{counter}}</div>
+    <button @click ="increment">加</button>
+    <button @click ="decrement">减</button>
+</div>
+<script src="../vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",
+        data:{
+            counter:0
+        },
+        methods:{
+          increment (){
+              this.counter++
+          },
+           decrement(){
+              this.counter--
+           }
+        }
+    })
+</script>
+</body>
+</html>
